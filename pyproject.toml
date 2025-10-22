@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyspark-vector"
+version = "0.1.0"
+description = "A lightweight PySpark vector similarity and distance library."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Cenz Wong", email = "cenzth@gmail.com" }
+]
+keywords = ["pyspark", "vector", "similarity", "distance", "cosine", "euclidean"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+dependencies = [
+  "pyspark>=3.3.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "isort"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pysparky_vector*"]
